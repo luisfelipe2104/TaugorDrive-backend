@@ -14,14 +14,14 @@ generator client {
 datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
-  shadowDatabaseUrl = env("DATABASE_URL")
+  shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
 }
 
 model File {
-  id Int @id @default(autoincrement())
-  user_id String
-  fileName String 
-  fileType String 
-  fileUrl String
-  fileSize String
+  id           Int     @id @default(autoincrement())
+  user_id      String
+  fileName     String 
+  fileType     String 
+  fileUrl      String
+  fileSize     String
 }
